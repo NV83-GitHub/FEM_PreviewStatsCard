@@ -2,26 +2,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 
 :root {
-    --bgColor: hsl(233, 47%, 7%);
-    --cardBg: hsl(244, 38%, 16%);
-    --accent: hsl(277, 64%, 61%);
+  --bgColor: hsl(233, 47%, 7%);
+  --cardBg: hsl(244, 38%, 16%, 0.5);
+  --accent: hsl(277, 64%, 61%);
 
-    --mainHeaging: hsl(0, 0%, 100%);
-    --mainParagraph:  hsl(0, 0%, 100%, 0.75);
-    --statHeaging:  hsl(0, 0%, 100%, 0.6);
+  --mainHeaging: hsl(0, 0%, 100%);
+  --mainParagraph: hsl(0, 0%, 100%, 0.75);
+  --statHeading: hsl(0, 0%, 100%, 0.6);
 }
 
 * {
-    box-sizing: border-box;
-    padding: none;
-    margin: none;
+  box-sizing: border-box;
+  padding: none;
+  margin: none;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--bgColor);
-    border: white 1px solid;
-    color: var(--mainHeaging);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bgColor);
+  color: var(--mainHeaging);
+  font-size: 15px;
+  font-family: inter;
+}
 
+#accent {
+  color: var(--accent);
+}
+
+.container {
+  display: flex;
+  background-color: var(--cardBg);
+  width: 70vw;
+  height: 45.8vh;
+  position: relative;
+}
+
+.container .card .textSideCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 82px;
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  border: greenyellow 1px solid;
+  color: var(--mainParagraph);
+}
+
+.container .card .textSideCard .statsBox {
+  display: flex;
+  justify-content: space-around;
+  border: green 1px solid;
+}
+
+.container .card .imageSideCard {
+  z-index: -1;
+  width: 40%;
+  position: absolute;
+  right: 3px;
+}
+
+#numbers {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+#text {
+  text-transform: uppercase;
+  color: var(--statHeading);
 }
